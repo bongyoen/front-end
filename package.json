@@ -23,6 +23,7 @@
     "apexcharts": "^3.35.3",
     "axios": "^0.27.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.16",
     "material-ui-popup-state": "^4.0.1",
@@ -40,12 +41,12 @@
     "redux": "^4.2.0",
     "styled-components": "^5.1.1",
     "typescript": "^4.7.4",
-    "yup": "^0.32.11",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

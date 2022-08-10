@@ -22,13 +22,13 @@ const BajajAreaChartCard = () => {
     const orangeDark = theme.palette.secondary[800];
 
     useEffect(() => {
-        const newSupportChart = {
-            ...chartData.options,
-            colors: [orangeDark],
-            tooltip: {
-                theme: 'light'
-            }
-        };
+        // const newSupportChart = {
+        //     ...chartData.options,
+        //     colors: [orangeDark],
+        //     tooltip: {
+        //         theme: 'light'
+        //     }
+        // };
         // ApexCharts.exec(`support-chart`, 'updateOptions', newSupportChart);
     }, [navType, orangeDark]);
 

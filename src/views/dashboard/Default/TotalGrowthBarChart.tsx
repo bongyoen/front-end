@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import {useEffect, useState} from 'react';
+import {useSelector} from 'react-redux';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
-import { Grid, MenuItem, TextField, Typography } from '@mui/material';
+import {useTheme} from '@mui/material/styles';
+import {Grid, MenuItem, TextField, Typography} from '@mui/material';
 
 // third-party
 // import ApexCharts from 'apexcharts';
@@ -13,7 +13,7 @@ import ApexCharts from 'react-apexcharts'
 // project imports
 import SkeletonTotalGrowthBarChart from '../../../ui-component/cards/Skeleton/TotalGrowthBarChart';
 import MainCard from '../../../ui-component/cards/MainCard';
-import { gridSpacing } from '../../../store/constant';
+import {gridSpacing} from '../../../store/constant';
 
 // chart data
 import chartData from './chart-data/total-growth-bar-chart';
@@ -52,35 +52,35 @@ const TotalGrowthBarChart = ({ isLoading }: any) => {
     const secondaryLight = theme.palette.secondary.light;
 
     useEffect(() => {
-        const newChartData = {
-            ...chartData.options,
-            colors: [primary200, primaryDark, secondaryMain, secondaryLight],
-            xaxis: {
-                labels: {
-                    style: {
-                        colors: [primary, primary, primary, primary, primary, primary, primary, primary, primary, primary, primary, primary]
-                    }
-                }
-            },
-            yaxis: {
-                labels: {
-                    style: {
-                        colors: [primary]
-                    }
-                }
-            },
-            grid: {
-                borderColor: grey200
-            },
-            tooltip: {
-                theme: 'light'
-            },
-            legend: {
-                labels: {
-                    colors: grey500
-                }
-            }
-        };
+        // const newChartData = {
+        //     ...chartData.options,
+        //     colors: [primary200, primaryDark, secondaryMain, secondaryLight],
+        //     xaxis: {
+        //         labels: {
+        //             style: {
+        //                 colors: [primary, primary, primary, primary, primary, primary, primary, primary, primary, primary, primary, primary]
+        //             }
+        //         }
+        //     },
+        //     yaxis: {
+        //         labels: {
+        //             style: {
+        //                 colors: [primary]
+        //             }
+        //         }
+        //     },
+        //     grid: {
+        //         borderColor: grey200
+        //     },
+        //     tooltip: {
+        //         theme: 'light'
+        //     },
+        //     legend: {
+        //         labels: {
+        //             colors: grey500
+        //         }
+        //     }
+        // };
 
         // do not load chart when loading
         if (!isLoading) {

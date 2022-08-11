@@ -8,6 +8,7 @@ import TechStack from "../views/techStack/TechStack";
 import AnywhereMouse from "../views/project/AnywhereMouse";
 import PortolioSite from "../views/project/PortolioSite";
 import GoodLuckDog from "../views/project/GoodLuckDog";
+import {RouteObject} from "react-router/lib/router";
 
 // dashboard routing
 const DashboardDefault: any = Loadable(lazy(() => import('../views/dashboard/Default')));
@@ -26,13 +27,13 @@ const Eduction: any = Loadable(lazy(() => import('../views/education/Education')
 
 // ==============================|| MAIN ROUTING ||============================== //
 
-const MainRoutes = {
+const MainRoutes: RouteObject = {
     path: '/',
     element: <MainLayout/>,
     children: [
         {
             path: '/',
-            element: <DashboardDefault/>
+            element: <Introduce/>
         },
         {
             path: 'dashboard',

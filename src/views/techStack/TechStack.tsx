@@ -5,7 +5,7 @@ import {Grid} from "@mui/material";
 function TechStack() {
     return(
         <MainCard title={"TeckStack"}>
-            <Grid xs={12} sm={6}>
+            <Grid item xs={12} sm={6}>
 
             </Grid>
         </MainCard>

@@ -12,6 +12,13 @@ const project = {
             icon: IconBulb,
             children: [
                 {
+                    id: 'portoliosite',
+                    title: 'PortfolioSite',
+                    type: 'item',
+                    url: '/project/portoliosite',
+                    breadcrumbs: false
+                },
+                {
                     id: 'anywheremouse',
                     title: 'anywhere mouse',
                     type: 'item',
@@ -25,13 +32,7 @@ const project = {
                     url: '/project/goodluckdog',
                     breadcrumbs: false
                 },
-                {
-                    id: 'portoliosite',
-                    title: 'PortfolioSite',
-                    type: 'item',
-                    url: '/project/portoliosite',
-                    breadcrumbs: false
-                },
+
             ]
         },
     ]

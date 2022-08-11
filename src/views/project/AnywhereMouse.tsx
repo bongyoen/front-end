@@ -3,7 +3,7 @@ import {Grid} from "@mui/material";
 
 function AnywhereMouse() {
     return (
-        <MainCard title={"AnywhereMouse"}>
+        <MainCard title={"Project | AnywhereMouse"}>
             <Grid item xs={12} sm={6}>
             </Grid>
         </MainCard>

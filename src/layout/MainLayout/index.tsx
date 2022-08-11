@@ -23,7 +23,7 @@ const Main = styled('main',
     {shouldForwardProp: (prop) => prop !== 'open'})
 (({theme, id}: any) => ({
     ...theme.typography.mainContent,
-    ...(id!=="true" && {
+    ...(id !== "true" && {
         borderBottomLeftRadius: 0,
         borderBottomRightRadius: 0,
         transition: theme.transitions.create('margin', {
@@ -46,7 +46,7 @@ const Main = styled('main',
             marginRight: '10px'
         }
     }),
-    ...(id==="true" && {
+    ...(id === "true" && {
         transition: theme.transitions.create('margin', {
             easing: theme.transitions.easing.easeOut,
             duration: theme.transitions.duration.enteringScreen
@@ -76,18 +76,18 @@ const MainLayout = () => {
 
     const dispatch = useDispatch();
     const handleLeftDrawerToggle = () => {
-        dispatch({ type: SET_MENU, opened: !leftDrawerOpened });
+        dispatch({type: SET_MENU, opened: !leftDrawerOpened});
     };
 
     useEffect(() => {
-        dispatch({ type: SET_MENU, opened: !matchDownMd });
+        dispatch({type: SET_MENU, opened: !matchDownMd});
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [matchDownMd]);
 
 
     return (
-        <Box sx={{ display: 'flex' }}>
-            <CssBaseline />
+        <Box sx={{display: 'flex'}}>
+            <CssBaseline/>
             {/* header */}
             <AppBar
                 enableColorOnDark
@@ -100,20 +100,20 @@ const MainLayout = () => {
                 }}
             >
                 <Toolbar>
-                    <Header handleLeftDrawerToggle={handleLeftDrawerToggle} />
+                    <Header handleLeftDrawerToggle={handleLeftDrawerToggle}/>
                 </Toolbar>
             </AppBar>
 
             {/* drawer */}
-            <Sidebar drawerOpen={leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
+            <Sidebar drawerOpen={leftDrawerOpened} drawerToggle={handleLeftDrawerToggle}/>
 
             {/* main content */}
             <Main theme={theme} id={leftDrawerOpened ? "true" : "false"}>
                 {/* breadcrumb */}
-                <Breadcrumbs separator={IconChevronRight} navigation={navigation} icon title rightAlign />
-                <Outlet />
+                <Breadcrumbs separator={IconChevronRight} navigation={navigation} icon title rightAlign/>
+                <Outlet/>
             </Main>
-            <Customization />
+            <Customization/>
         </Box>
     );
 };

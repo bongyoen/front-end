@@ -3,10 +3,16 @@ import {Typography} from '@mui/material';
 
 // project imports
 import NavGroup from './NavGroup';
-import menuItem from './../../../../menu-items';
+import education from "../../../../menu-items/education";
+import dashboard from "../../../../menu-items/dashboard";
+import pages from "../../../../menu-items/pages";
+import utilities from "../../../../menu-items/utilities";
+import other from "../../../../menu-items/other";
 
 // ==============================|| SIDEBAR MENU LIST ||============================== //
-
+const menuItem = {
+    items: [dashboard, education, pages, utilities, other]
+};
 const MenuList = () => {
     const navItems = menuItem.items.map((item) => {
         switch (item.type) {

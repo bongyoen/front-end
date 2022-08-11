@@ -26,7 +26,8 @@ const other = {
             icon: icons.IconHelp,
             external: true,
             target: true
-        }
+        },
+
     ]
 };
 

@@ -12,7 +12,8 @@ const education = {
             url: '/education',
             icon: IconAB,
             breadcrumbs: false
-        }
+        },
+
     ]
 };
 export default education;

@@ -12,24 +12,24 @@ const project = {
             icon: IconBulb,
             children: [
                 {
-                    id: 'anywhere-mouse',
+                    id: 'anywheremouse',
                     title: 'anywhere mouse',
                     type: 'item',
-                    url: '/',
+                    url: '/project/anywheremouse',
                     breadcrumbs: false
                 },
                 {
-                    id: 'good-luck-dog',
+                    id: 'goodluckdog',
                     title: '개팔자 상팔자',
                     type: 'item',
-                    url: '/',
+                    url: '/project/goodluckdog',
                     breadcrumbs: false
                 },
                 {
-                    id: 'portfolio-site',
+                    id: 'portoliosite',
                     title: 'PortfolioSite',
                     type: 'item',
-                    url: '/',
+                    url: '/project/portoliosite',
                     breadcrumbs: false
                 },
             ]

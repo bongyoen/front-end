@@ -9,7 +9,7 @@ const introduce = {
             id: 'introduce-introduce',
             title: 'Introduce',
             type: 'item',
-            url: '/',
+            url: '/introduce',
             icon: IconFriends,
             breadcrumbs: false
         },

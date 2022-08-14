@@ -23,7 +23,6 @@
     "apexcharts": "^3.35.3",
     "axios": "^0.27.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.1",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.16",
     "material-ui-popup-state": "^4.0.1",

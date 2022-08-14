@@ -1,16 +1,8 @@
-import {environment} from "../environments/environment";
-import CommonAxios from "./CommonAxios";
-
-const api = environment.ec2Api.local;
+import CommonAxiosService from "./CommonAxios.service";
 
 const rest = {
-    getinfo() {
-        return CommonAxios({url: api + "info", method: 'GET'});
-    },
-
-
-    getLiveDeviceList() {
-        return CommonAxios({url: api + "info", method: 'GET'});
+    async postSaveHtml(data: any) {
+        return await CommonAxiosService.post("quill/saveHtml", data);
     }
 }
 

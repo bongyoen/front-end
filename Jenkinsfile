@@ -44,8 +44,6 @@ pipeline {
 
           sh "ssh -o StrictHostKeyChecking=no ${SSH_CONNECTION} 'docker run -d --name ${IMAGE_NAME} -v /home/nginx:/app/build/uploads -p 80:80 ${IMAGE_STORAGE}/${IMAGE_NAME}:latest'"
           sh "ssh -o StrictHostKeyChecking=no ${SSH_CONNECTION} 'echo y | docker image prune -a'"
-
-          sh " 'echo ""'"
         }
 
       }

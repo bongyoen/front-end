@@ -5,7 +5,7 @@ import {useEffect, useState} from "react";
 import Editor from "../../utils/quillEditor/Editor";
 
 import "./introduce.scss";
-import rest from "../../service/api.service";
+import rest from "../../core/service/api.service";
 import {QuillEditorModel} from "../../core/models/quillEditor.model";
 import mainRoutes from "../../routes/MainRoutes";
 import Select from "react-select";
@@ -25,12 +25,14 @@ function Introduce() {
         setQuillHtml(text.value);
     }
 
-
     const save = () => {
         quillCond.htmlTxt = quillHtml;
         quillCond.targetPage = "몰라";
         rest.postSaveHtml(quillCond).then(res => {
             console.log(res);
+
+        }).catch(e => {
+            console.error(e);
         })
     }
 

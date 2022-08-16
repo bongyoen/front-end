@@ -1,5 +1,5 @@
 import axios from "axios";
-import {environment} from "../environments/environment";
+import {environment} from "../../environments/environment";
 
 const api = environment.ec2Api.ec2;
 

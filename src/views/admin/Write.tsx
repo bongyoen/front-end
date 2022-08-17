@@ -26,7 +26,6 @@ function Write() {
 
     const save = () => {
         quillCond.htmlTxt = quillHtml;
-        quillCond.targetPage = "몰라";
         rest.postSaveHtml(quillCond).then(res => {
             console.log(res);
 

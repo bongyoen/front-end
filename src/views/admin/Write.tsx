@@ -1,11 +1,12 @@
 import MainCard from "../../ui-component/cards/MainCard";
 import {Grid} from "@mui/material";
 import Select from "react-select";
-import Editor from "../../utils/quillEditor/Editor";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import mainRoutes from "../../routes/MainRoutes";
 import rest from "../../core/service/api.service";
 import {QuillEditorModel} from "../../core/models/quillEditor.model";
+import EditorToolbar, {formats, modules} from "../../utils/quillEditor/EditorToolbar";
+import ReactQuill from "react-quill";
 
 
 const quillCond = new QuillEditorModel();
@@ -16,13 +17,7 @@ function Write() {
         targetPageOption(mainRoutes.children);
     }, []);
 
-    console.log(mainRoutes.path);
-    let [quillHtml, setQuillHtml] = useState('');
-    const editorSetText = (text: any) => {
-        setQuillHtml(text.value);
-        quillCond.pageHtml = text.value;
-        console.log(quillCond);
-    }
+    let [quillHtml, setQuillHtml]: any = useState('');
 
     const save = () => {
         quillCond.pageHtml = quillHtml;
@@ -34,9 +29,22 @@ function Write() {
         })
     }
 
+    const [quillState, setQuillState]: any = React.useState({value: null});
+    const handleChange = (value: any) => {
+        setQuillHtml(value);
+        quillCond.pageHtml = quillHtml;
+        setQuillState({value});
+    };
+
     const setTargetPage = (e: any) => {
-        console.log(e);
         quillCond.pageTarget = e.value;
+        if (quillCond.pageTarget != null) {
+            rest.getHtml(quillCond.pageTarget).then(res => {
+                const html: QuillEditorModel = res.data;
+                setQuillState({value: html.pageHtml});
+                setQuillHtml(html.pageHtml);
+            })
+        }
     }
 
     return (
@@ -45,7 +53,18 @@ function Write() {
             </Grid>
             <Select options={optiopn} onChange={setTargetPage}/>
             <input type={"text"} onChange={(event) => {quillCond.title = event.target.value}}/>
-            <Editor setText={editorSetText}/>
+            <div className="text-editor">
+                <EditorToolbar/>
+                <ReactQuill
+                    theme="snow"
+                    value={quillState.value}
+                    onChange={handleChange}
+                    placeholder={"Write something awesome..."}
+                    modules={modules}
+                    formats={formats}
+                />
+            </div>
+            {/*<Editor setText={editorSetText} setHtml={quillHtml}/>*/}
             <button onClick={save}>저장</button>
         </MainCard>
     )

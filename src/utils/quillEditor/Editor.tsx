@@ -10,6 +10,13 @@ export const Editor = (props : any) => {
         setState({value});
         props.setText({value})
     };
+
+
+
+    console.log(props);
+    // if (props.setHTML) {
+    //     setState({value: props.setHTML});
+    // }
     return (
         <div className="text-editor">
             <EditorToolbar/>

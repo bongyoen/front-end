@@ -5,16 +5,14 @@ import {useEffect, useState} from "react";
 
 import "./introduce.scss";
 import rest from "../../core/service/api.service";
-import {QuillEditorModel} from "../../core/models/quillEditor.model";
-
-const quillCond = new QuillEditorModel();
-const optiopn: any = [];
 
 function Introduce() {
     const [quillHtml, setQuillHtml] = useState('');
 
     useEffect(() => {
-        rest.getHtml("introduce")
+        rest.getHtml("introduce").then(res => {
+            setQuillHtml(res.data);
+        })
     }, []);
 
     return (

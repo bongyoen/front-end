@@ -20,12 +20,12 @@ function Write() {
     let [quillHtml, setQuillHtml] = useState('');
     const editorSetText = (text: any) => {
         setQuillHtml(text.value);
-        quillCond.htmlTxt = text.value;
+        quillCond.pageHtml = text.value;
         console.log(quillCond);
     }
 
     const save = () => {
-        quillCond.htmlTxt = quillHtml;
+        quillCond.pageHtml = quillHtml;
         rest.postSaveHtml(quillCond).then(res => {
             console.log(res);
 
@@ -36,7 +36,7 @@ function Write() {
 
     const setTargetPage = (e: any) => {
         console.log(e);
-        quillCond.targetPage = e.value;
+        quillCond.pageTarget = e.value;
     }
 
     return (

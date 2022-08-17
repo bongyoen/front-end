@@ -1,5 +1,5 @@
 export class QuillEditorModel {
-    htmlTxt?: string;
-    targetPage?: string;
+    pageHtml?: string;
+    pageTarget?: string;
     title?: string;
 }

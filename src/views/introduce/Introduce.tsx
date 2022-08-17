@@ -5,13 +5,15 @@ import {useEffect, useState} from "react";
 
 import "./introduce.scss";
 import rest from "../../core/service/api.service";
+import {QuillEditorModel} from "../../core/models/quillEditor.model";
 
 function Introduce() {
-    const [quillHtml, setQuillHtml] = useState('');
+    const [quillHtml, setQuillHtml]: any = useState('');
 
     useEffect(() => {
         rest.getHtml("introduce").then(res => {
-            setQuillHtml(res.data);
+            const html: QuillEditorModel = res.data;
+            setQuillHtml(html.pageHtml);
         })
     }, []);
 

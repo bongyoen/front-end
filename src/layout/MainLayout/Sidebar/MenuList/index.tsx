@@ -8,6 +8,7 @@ import techStack from "../../../../menu-items/techStack";
 import github from "../../../../menu-items/github";
 import project from "../../../../menu-items/project";
 import introduce from "../../../../menu-items/Introduce";
+import utilities from "../../../../menu-items/utilities";
 
 // ==============================|| SIDEBAR MENU LIST ||============================== //
 const menuItem = {
@@ -19,7 +20,7 @@ const menuItem = {
         github,
         // dashboard,
         // pages,
-        // utilities,
+        utilities,
         // other
     ]
 };

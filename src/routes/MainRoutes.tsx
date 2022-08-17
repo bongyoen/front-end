@@ -23,6 +23,7 @@ const UtilsTablerIcons: any = Loadable(lazy(() => import('../views/utilities/Tab
 const SamplePage: any = Loadable(lazy(() => import('../views/sample-page')));
 
 const Eduction: any = Loadable(lazy(() => import('../views/education/Education')));
+const Write: any = Loadable(lazy(() => import('../views/admin/Write')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -105,6 +106,15 @@ const MainRoutes = {
                     path: "portoliosite",
                     element: <PortolioSite/>
                 },
+            ]
+        },
+        {
+            path: 'admin',
+            children: [
+                {
+                    path: "write",
+                    element: <Write/>
+                }
             ]
         }
     ]

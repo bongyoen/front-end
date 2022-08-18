@@ -1,7 +1,7 @@
 import axios from "axios";
 import {environment} from "../../environments/environment";
 
-const api = environment.ec2Api.ec2;
+const api = environment.ec2Api.local;
 
 const CommonAxiosService = axios.create({
     baseURL: api,

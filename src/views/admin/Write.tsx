@@ -7,6 +7,7 @@ import rest from "../../core/service/api.service";
 import {QuillEditorModel} from "../../core/models/quillEditor.model";
 import EditorToolbar, {formats, modules} from "../../utils/quillEditor/EditorToolbar";
 import ReactQuill from "react-quill";
+import "../../core/css/introduce.scss";
 
 
 const quillCond = new QuillEditorModel();

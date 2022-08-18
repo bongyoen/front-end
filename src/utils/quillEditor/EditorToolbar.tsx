@@ -44,6 +44,7 @@ Quill.register(Size, true);
 // Add fonts to whitelist and register them
 const Font = Quill.import("formats/font");
 Font.whitelist = [
+
     "arial",
     "comic-sans",
     "courier-new",

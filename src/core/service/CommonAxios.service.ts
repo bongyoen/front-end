@@ -6,7 +6,7 @@ const api = environment.ec2Api.api;
 const CommonAxiosService = axios.create({
     baseURL: api,
     headers: {"content-type": `application/json`},
-    timeout: 1000,
+    timeout: 5000,
 })
 
 CommonAxiosService.interceptors.request.use(

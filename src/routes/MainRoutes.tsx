@@ -5,7 +5,7 @@ import MainLayout from '../layout/MainLayout';
 import Loadable from '../ui-component/Loadable';
 import Introduce from "../views/introduce/Introduce";
 import TechStack from "../views/techStack/TechStack";
-import AnywhereMouse from "../views/project/AnywhereMouse";
+import AnywhereMouseComponent from "../views/project/AnywhereMouse.component";
 import PortolioSite from "../views/project/PortolioSite";
 import GoodLuckDog from "../views/project/GoodLuckDog";
 
@@ -96,7 +96,7 @@ const MainRoutes = {
             children: [
                 {
                     path: "anywheremouse",
-                    element: <AnywhereMouse/>
+                    element: <AnywhereMouseComponent/>
                 },
                 {
                     path: "goodluckdog",

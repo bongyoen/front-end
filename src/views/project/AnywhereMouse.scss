@@ -1,0 +1,11 @@
+.pdfView {
+  text-align: right;
+}
+
+.pdfView:hover {
+  cursor: pointer;
+  color: #269dff;
+  svg {
+    stroke: #f44336;
+  }
+}

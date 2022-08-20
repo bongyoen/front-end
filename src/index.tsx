@@ -22,39 +22,6 @@ import {store} from './store';
 import './assets/scss/style.scss';
 import config from './config';
 
-// let baiscState = [
-//     {id: 0, name: 'white bag', quan: 2},
-//     {id: 1, name: 'black bag', quan: 5},
-// ]
-// let alertState = true;
-// let store = createStore(combineReducers({reducer, reducer2}));
-//
-// function reducer(state = baiscState, action: any) {
-//     let copyArr = [...state];
-//     switch (action.type) {
-//         case "수량증가":
-//             copyArr[action.payload.data].quan++;
-//             return copyArr;
-//         case "수량감소":
-//             copyArr[action.payload.data].quan--;
-//             return copyArr;
-//         case "항목추가":
-//             console.log(copyArr);
-//             copyArr.push(action.payload);
-//             return copyArr;
-//         default:
-//             return state;
-//     }
-// }
-//
-// function reducer2(state = alertState, action: any) {
-//     if (action.type === "alertClose") {
-//         state = false;
-//         return state;
-//     } else {
-//         return state;
-//     }
-// }
 const root = createRoot(document.getElementById('root') as Element); // createRoot(container!) if you use TypeScript
 root.render(
     <Provider store={store}>

@@ -9,6 +9,7 @@ import github from "../../../../menu-items/github";
 import project from "../../../../menu-items/project";
 import introduce from "../../../../menu-items/Introduce";
 import utilities from "../../../../menu-items/utilities";
+import {admin} from "../../../../menu-items/admin";
 
 // ==============================|| SIDEBAR MENU LIST ||============================== //
 const menuItem = {
@@ -21,6 +22,7 @@ const menuItem = {
         // dashboard,
         // pages,
         utilities,
+        admin
         // other
     ]
 };

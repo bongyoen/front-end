@@ -8,15 +8,20 @@ import {QuillEditorModel} from "../../core/models/quillEditor.model";
 import EditorToolbar, {formats, modules} from "../../utils/quillEditor/EditorToolbar";
 import ReactQuill from "react-quill";
 import "../../core/css/introduce.scss";
-
+import {usePrompt} from "../../core/service/BlockAndPrompt.service";
 
 const quillCond = new QuillEditorModel();
 const optiopn: any = [];
 
 function Write() {
+
     useEffect(() => {
         targetPageOption(mainRoutes.children);
     }, []);
+
+    usePrompt("정말 종료할꺼? 내용 삭제될 수 있어!?", true);
+
+
 
     let [quillHtml, setQuillHtml]: any = useState('');
 
@@ -65,7 +70,6 @@ function Write() {
                     formats={formats}
                 />
             </div>
-            {/*<Editor setText={editorSetText} setHtml={quillHtml}/>*/}
             <button onClick={save}>저장</button>
         </MainCard>
     )

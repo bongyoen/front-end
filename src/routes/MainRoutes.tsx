@@ -23,7 +23,7 @@ const UtilsTablerIcons: any = Loadable(lazy(() => import('../views/utilities/Tab
 const SamplePage: any = Loadable(lazy(() => import('../views/sample-page')));
 
 const Eduction: any = Loadable(lazy(() => import('../views/education/Education')));
-const Write: any = Loadable(lazy(() => import('../views/admin/Write')));
+const Write: any = Loadable(lazy(() => import('../views/admin/Write.component')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 

@@ -22,7 +22,6 @@ function Write() {
     usePrompt("정말 종료할꺼? 내용 삭제될 수 있어!?", true);
 
 
-
     let [quillHtml, setQuillHtml]: any = useState('');
 
     const save = () => {
@@ -58,7 +57,9 @@ function Write() {
             <Grid item xs={12} sm={6}>
             </Grid>
             <Select options={optiopn} onChange={setTargetPage}/>
-            <input type={"text"} onChange={(event) => {quillCond.title = event.target.value}}/>
+            <input type={"text"} onChange={(event) => {
+                quillCond.title = event.target.value
+            }}/>
             <div className="text-editor">
                 <EditorToolbar/>
                 <ReactQuill

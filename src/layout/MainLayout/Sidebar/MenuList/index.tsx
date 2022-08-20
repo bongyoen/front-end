@@ -3,7 +3,7 @@ import {Typography} from '@mui/material';
 
 // project imports
 import NavGroup from './NavGroup';
-import education from "../../../../menu-items/education";
+import career from "../../../../menu-items/career";
 import techStack from "../../../../menu-items/techStack";
 import github from "../../../../menu-items/github";
 import project from "../../../../menu-items/project";
@@ -17,7 +17,7 @@ const menuItem = {
         introduce,
         techStack,
         project,
-        education,
+        career,
         github,
         // dashboard,
         // pages,

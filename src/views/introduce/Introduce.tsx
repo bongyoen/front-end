@@ -2,7 +2,6 @@ import MainCard from '../../ui-component/cards/MainCard';
 import {Grid} from "@mui/material";
 import "@material-ui/core"
 import {useEffect, useState} from "react";
-
 import "../../core/css/introduce.scss";
 import rest from "../../core/service/api.service";
 import {QuillEditorModel} from "../../core/models/quillEditor.model";

@@ -8,6 +8,7 @@ import TechStack from "../views/techStack/TechStack";
 import AnywhereMouseComponent from "../views/project/AnywhereMouse.component";
 import PortolioSite from "../views/project/PortolioSite";
 import GoodLuckDog from "../views/project/GoodLuckDog";
+import PortfolioComponent from "../views/portfolio/Portfolio.component";
 
 // dashboard routing
 const DashboardDefault: any = Loadable(lazy(() => import('../views/dashboard/Default')));
@@ -114,6 +115,15 @@ const MainRoutes = {
                 {
                     path: "write",
                     element: <Write/>
+                }
+            ]
+        },
+        {
+            path: 'portpolio',
+            children: [
+                {
+                    path: "portpolio",
+                    element: <PortfolioComponent/>
                 }
             ]
         }

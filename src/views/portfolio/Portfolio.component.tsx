@@ -15,8 +15,9 @@ function PortfolioComponent() {
     const [selectorTriger, setSelectorTriger] = useState(false);
     const [modalOpenForPort, setModalOptnForPort] = useState(false);
     const [modalOpenForMouse, setModalOptnForMouse] = useState(false);
-    // const [modalOpenForDog, setModalOptnForDog] = useState(false);
+    const [modalOpenForDog, setModalOptnForDog] = useState(false);
     const [blockScroll, allowScroll] = useScrollBlock();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const goodsTabs: any = {
         0: useMoveScrool(),
         1: useMoveScrool(),
@@ -46,6 +47,11 @@ function PortfolioComponent() {
             default :
         }
     }, [goodsTabs, scrollReducer.scrollTarget, selectorTriger])
+
+    useEffect(() => {
+        scrollReducer.scrollTarget = '';
+    }, [blockScroll, allowScroll, scrollReducer])
+
 
     const imgSrc = 'http://beyondi.site/uploads/localdir/';
     const portPolioImg = [
@@ -127,7 +133,7 @@ function PortfolioComponent() {
                         <div className={"AboutItems"}>
                             <div className={'AboutInfo'}>
                                 <div className={'AboutItemIcon'}>
-                                    <img src="http://beyondi.site/uploads/localdir/person-fill.svg" alt="1"/>
+                                    <img src={imgSrc + "person-fill.svg"} alt="1"/>
                                 </div>
                                 <div className={'AboutFiled'}>
                                     <div className={'AboutFiledLabel'}>
@@ -143,7 +149,7 @@ function PortfolioComponent() {
                         <div className={"AboutItems"}>
                             <div className={'AboutInfo'}>
                                 <div className={'AboutItemIcon'}>
-                                    <img src="http://beyondi.site/uploads/localdir/geo-alt-fill.svg" alt="1"/>
+                                    <img src={imgSrc + "geo-alt-fill.svg"} alt="1"/>
                                 </div>
                                 <div className={'AboutFiled'}>
                                     <div className={'AboutFiledLabel'}>
@@ -303,10 +309,10 @@ function PortfolioComponent() {
                                                 GitHub
                                             </div>
                                             <div className={'projectDescripEaValue'}>
-                                                <a target='_blank'
-                                                   href={'https://github.com/bongyoen/back-end'}>https://github.com/bongyoen/back-end</a><br/>
-                                                <a target='_blank'
-                                                   href={'https://github.com/bongyoen/front-end'}>https://github.com/bongyoen/front-end</a>
+                                                <a target='_blank' rel="noreferrer"
+                                                   href={'https://github.com/bongyoen/back-end'}>github.com/bongyoen/back-end</a><br/>
+                                                <a target='_blank' rel="noreferrer"
+                                                   href={'https://github.com/bongyoen/front-end'}>github.com/bongyoen/front-end</a>
                                             </div>
                                         </div>
                                         <div className={'projectDescripEa'}>
@@ -314,8 +320,8 @@ function PortfolioComponent() {
                                                 URL
                                             </div>
                                             <div className={'projectDescripEaValue'}>
-                                                <a target='_blank'
-                                                   href={'http://beyondi.site/'}>http://beyondi.site/</a>
+                                                <a target='_blank' rel="noreferrer"
+                                                   href={'http://beyondi.site/'}>beyondi.site/</a>
                                             </div>
                                         </div>
                                         <div className={'projectDescripEa'}>
@@ -354,7 +360,8 @@ function PortfolioComponent() {
                                             포트폴리오 용도로 제작한 웹사이트입니다. 지금 보고 있는 바로 이 웹사이트에 해당합니다.
                                             <div className={'projectReadme'}
                                                  onClick={() => {
-                                                     setModalOptnForMouse(true)
+                                                     setModalOptnForMouse(true);
+                                                     blockScroll()
                                                  }}
                                             >자세히 보기 ▶ README</div>
                                         </div>
@@ -363,7 +370,10 @@ function PortfolioComponent() {
                                                 주요 기능
                                             </div>
                                             <div className={'projectDescripEaValue'}>
-                                                블라블라
+                                                탈부착 가능한 케이스,<br/>
+                                                PC와 무선마우스 기능,<br/>
+                                                트랙패드 기능,<br/>
+                                                멀티 페어링,<br/>
                                             </div>
                                         </div>
                                         <div className={'projectDescripEa'}>
@@ -371,28 +381,13 @@ function PortfolioComponent() {
                                                 GitHub
                                             </div>
                                             <div className={'projectDescripEaValue'}>
-                                                블라블라
-                                            </div>
-                                        </div>
-                                        <div className={'projectDescripEa'}>
-                                            <div className={'projectDescripEaLabel'}>
-                                                URL
-                                            </div>
-                                            <div className={'projectDescripEaValue'}>
-                                                블라블라
+                                                <a target='_blank' rel="noreferrer"
+                                                   href={'https://github.com/bongyoen/anywherMouse'}>github.com/bongyoen/anywherMouse</a><br/>
                                             </div>
                                         </div>
                                         <div className={'projectDescripEa'}>
                                             <div className={'projectDescripEaLabel'}>
                                                 Tech
-                                            </div>
-                                            <div className={'projectDescripEaValue'}>
-                                                블라블라
-                                            </div>
-                                        </div>
-                                        <div className={'projectDescripEa'}>
-                                            <div className={'projectDescripEaLabel'}>
-                                                Deployment
                                             </div>
                                             <div className={'projectDescripEaValue'}>
                                                 블라블라
@@ -414,7 +409,12 @@ function PortfolioComponent() {
                                     <div className={'projectDescriptions'}>
                                         <div className={'projectDescripMain'}>
                                             포트폴리오 용도로 제작한 웹사이트입니다. 지금 보고 있는 바로 이 웹사이트에 해당합니다.
-                                            <div className={'projectReadme'}>자세히 보기 ▶ README</div>
+                                            <div className={'projectReadme'}
+                                                 onClick={() => {
+                                                     setModalOptnForDog(true);
+                                                     blockScroll();
+                                                 }}
+                                            >자세히 보기 ▶ README</div>
                                         </div>
                                         <div className={'projectDescripEa'}>
                                             <div className={'projectDescripEaLabel'}>
@@ -510,7 +510,7 @@ function PortfolioComponent() {
                             </h2>
                             <p dir={'auto'}>
                                 <a target='_blank' href={'http://beyondi.site/'}
-                                   rel={'nofollow'}>http://beyondi.site/</a>
+                                   rel="noreferrer">http://beyondi.site/</a>
                             </p>
                             <h2 dir={'auto'}>
                                 📌 Summary
@@ -612,7 +612,7 @@ function PortfolioComponent() {
                 <div className={'modalBody'}>
                     <div className={'projectReadme'}>
                         <article className={'modalProjectContent'}>
-                            <h1 dir={'auto'}>Anywher Mouse</h1>
+                            <h1 dir={'auto'}>Anywhere Mouse</h1>
                             <h2 dir={'auto'}>
                                 📌 Summary
                             </h2>
@@ -624,7 +624,7 @@ function PortfolioComponent() {
                                 외부에서 노트북 활용 시 <strong>마우스의 부재로 생기는 불편한 니즈</strong>에 대한 아이디어에서 시작되었습니다.<br/>
                             </p>
                             <h2 className={"pdfView"}>
-                                <a target={'_blank'}
+                                <a target={'_blank'} rel="noreferrer"
                                    href={'http://beyondi.site/uploads/localdir/폰케이스형_블루투스_마우스_특허출원.pdf'}>
                                     특허출원.pdf
                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -647,7 +647,8 @@ function PortfolioComponent() {
 
                             </h2>
                             <h2 className={"pdfView"}>
-                                <a target={'_blank'} href={'http://beyondi.site/uploads/localdir/무선 마우스 케이스.pdf'} rel="noreferrer">
+                                <a target={'_blank'} href={'http://beyondi.site/uploads/localdir/무선 마우스 케이스.pdf'}
+                                   rel="noreferrer">
                                     anywherMouse보고서.pdf
                                     <svg xmlns="http://www.w3.org/2000/svg"
                                          className="icon icon-tabler icon-tabler-hand-click "
@@ -713,12 +714,99 @@ function PortfolioComponent() {
                             </h2>
 
                             <p dir={'auto'}>
-                                React 기술 스택을 배우면서, 앵귤러와 다른 디자인패턴과 순수 스크립트로 구성된 component, Virtural Dom, 단방향 Databinding과
-                                hook 등
-                                React의 다양한 방식들을 배울 수 있었습니다.
-                                <br/><br/>
-                                React에는 앵귤러에서와 같은 도구들이 없지만 대신에 유연성을 크다고 느꼈습니다.
-                                필요한 어떠한 라이브러리라도 리액트에 맞춰 넣을 수 있고 커뮤니티 또한 가장 활성화 되었기 때문에 그렇습니다.
+                                해당 프로젝트를 진행하면서 블루투스 연결에 필요한 descriptor 생성과 서비스, 브로드캐스터 등 안드로이드의 다양한 개발로직을 작성해볼 수
+                                있엇습니다.<br/>
+                                또한 블루투스 통신을 통한 마우스좌표값 전송에서 충분한 폴링레이트 확보하지 못하는 문제가 있었는데<br/>
+                                이런 어려움을 통한 보간작업을 해 보는 등 라이스사이클에 맞춰 애플리케이션에 제작해 오류를 줄이는 등의<br/>
+                                다양한 양식의 코딩을 진행 볼 수 있었고, 독창성과 기술력으로 학과에서 표창과 더불어 특허출원까지 진행할 수 있어<br/>
+                                매우 뜻깊은 프로젝트 였으며, 안드로이드 플랫폼에서 다양한 기능을 진행할 수 있다는 것을 다시 한 번 깨달을 수 있었습니다.
+                            </p>
+
+                            <h2 dir={'auto'}>
+                                🔨 Technology Stack
+                            </h2>
+                            <p dir={'auto'}>
+                                <li>
+                                    AndroudStudio, Arduino, SketchUp
+                                </li>
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </Modal>
+
+            <Modal isOpen={modalOpenForDog}
+                   onRequestClose={() => {
+                       setModalOptnForDog(false);
+                       allowScroll();
+                   }}
+                   shouldCloseOnOverlayClick={false}>
+                <div className={'modalHeader'}>README.md</div>
+                <div className={'modalBody'}>
+                    <div className={'projectReadme'}>
+                        <article className={'modalProjectContent'}>
+                            <h1 dir={'auto'}>개팔자 상팔자</h1>
+                            <h2 dir={'auto'}>
+                                📌 Summary
+                            </h2>
+                            <p dir={'auto'}>
+                                <strong>
+                                    스마트폰 케이스에 무선마우스를 장착하고, 애플리켜이션으로 제어하는 프로젝트입니다.<br/><br/>
+                                </strong>
+                                대학 4인 프로젝트로 개발을 담당하였으며 개발의 90% 부분을 담당하였습니다.<br/>
+                                외부에서 노트북 활용 시 <strong>마우스의 부재로 생기는 불편한 니즈</strong>에 대한 아이디어에서 시작되었습니다.<br/>
+                            </p>
+                            <h4 dir="auto">
+                                * 주요 기능
+                            </h4>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="" disabled={true}
+                                           checked={true}
+                                           className="task-list-item-checkbox"/>
+                                    탈부착 가능한 케이스
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="" disabled={true}
+                                           checked={true}
+                                           className="task-list-item-checkbox"/>
+                                    블루투스 연결을 통한 PC와 무선마우스 기능
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="" disabled={true}
+                                           checked={true}
+                                           className="task-list-item-checkbox"/>
+                                    애플리케이션 고유의 트랙패드 기능
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="" disabled={true}
+                                           checked={true}
+                                           className="task-list-item-checkbox"/>
+                                    멀티 페어링을 통한 다양한 기기 지원
+                                </li>
+                            </ul>
+
+                            <h2 dir={'auto'}>
+                                🤔 Background
+                            </h2>
+                            <p dir={'auto'}>
+                                무겁고 이동성이 부족한 데스크톱보다 어디든 휴대하면서 인터넷을 즐길 수 있는 노트북에 대한 수요가 증가하면서 이에 따른 불편한 점들이 생겨나고 있다. 그중
+                                노트북을 사용하면 필요한 주변기기들이 존재하고 이를 잊어버리거나 생략하게 되면 몇 가지 불편한 상황들을 만나게 되는데 특히 마우스의 경우 크기가 작아 쉽게
+                                잃어버리거나 잊혀질수있다 노트북에서 마우스가 없는 상황에서 작은 트랙패드의 사용은 상대적으로 제약과 불편을 가져올 수 있고. 이런 불편한 니즈를 캐치하여
+                                마우스를 언제든 휴대할 수 있게끔, 폰케이스에 블루투스 마우스의 기능을 접목하여 ' 폰케이스형 블루투스 마우스 ' 를 개발하고자한다.
+                            </p>
+
+                            <h2 dir={'auto'}>
+                                🔍 Meaning
+                            </h2>
+
+                            <p dir={'auto'}>
+                                해당 프로젝트를 진행하면서 블루투스 연결에 필요한 descriptor 생성과 서비스, 브로드캐스터 등 안드로이드의 다양한 개발로직을 작성해볼 수
+                                있엇습니다.<br/>
+                                또한 블루투스 통신을 통한 마우스좌표값 전송에서 충분한 폴링레이트 확보하지 못하는 문제가 있었는데<br/>
+                                이런 어려움을 통한 보간작업을 해 보는 등 라이스사이클에 맞춰 애플리케이션에 제작해 오류를 줄이는 등의<br/>
+                                다양한 양식의 코딩을 진행 볼 수 있었고, 독창성과 기술력으로 학과에서 표창과 더불어 특허출원까지 진행할 수 있어<br/>
+                                매우 뜻깊은 프로젝트 였으며, 안드로이드 플랫폼에서 다양한 기능을 진행할 수 있다는 것을 다시 한 번 깨달을 수 있었습니다.
                             </p>
 
                             <h2 dir={'auto'}>

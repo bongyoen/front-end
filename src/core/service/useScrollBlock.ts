@@ -6,6 +6,7 @@ const safeDocument: any = typeof document !== 'undefined' ? document : {};
  * Usage:
  * const [blockScroll, allowScroll] = useScrollBlock();
  */
+// eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
     const scrollBlocked: any = useRef();
     const html = safeDocument.documentElement;

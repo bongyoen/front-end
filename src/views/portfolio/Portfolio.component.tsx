@@ -349,7 +349,7 @@ function PortfolioComponent() {
                                 <div className={'projectTitle'}>Anywhere Mouse</div>
                                 <div className={'projectPeriod'}>
                                     2020.01
-                                    <span className={'projectChunk'}> (1인 개인 프로젝트)</span>
+                                    <span className={'projectChunk'}> (4인 개인 프로젝트)</span>
                                 </div>
                                 <div className={'projectInfo'}>
                                     <div className={'projectImgCarousel'}>
@@ -400,7 +400,7 @@ function PortfolioComponent() {
                                 <div className={'projectTitle'}>개팔자 상팔자</div>
                                 <div className={'projectPeriod'}>
                                     2020.01
-                                    <span className={'projectChunk'}> (1인 개인 프로젝트)</span>
+                                    <span className={'projectChunk'}> (7인 개인 프로젝트)</span>
                                 </div>
                                 <div className={'projectInfo'}>
                                     <div className={'projectImgCarousel'}>
@@ -497,7 +497,20 @@ function PortfolioComponent() {
                        allowScroll();
                    }}
                    shouldCloseOnOverlayClick={false}>
-                <div className={'modalHeader'}>README.md</div>
+                <div className={'modalHeader'}>README.md
+                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-letter-x modalClose"
+                         width="44"
+                         height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none"
+                         strokeLinecap="round" strokeLinejoin="round"
+                         onClick={() => {
+                             setModalOptnForPort(false);
+                             allowScroll();
+                         }}>
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="7" y1="4" x2="17" y2="20"/>
+                        <line x1="17" y1="4" x2="7" y2="20"/>
+                    </svg>
+                </div>
                 <div className={'modalBody'}>
                     <div className={'projectReadme'}>
                         <article className={'modalProjectContent'}>
@@ -605,7 +618,20 @@ function PortfolioComponent() {
                        allowScroll();
                    }}
                    shouldCloseOnOverlayClick={false}>
-                <div className={'modalHeader'}>README.md</div>
+                <div className={'modalHeader'}>README.md
+                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-letter-x modalClose"
+                         width="44"
+                         height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none"
+                         strokeLinecap="round" strokeLinejoin="round"
+                         onClick={() => {
+                             setModalOptnForMouse(false);
+                             allowScroll();
+                         }}>
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="7" y1="4" x2="17" y2="20"/>
+                        <line x1="17" y1="4" x2="7" y2="20"/>
+                    </svg>
+                </div>
                 <div className={'modalBody'}>
                     <div className={'projectReadme'}>
                         <article className={'modalProjectContent'}>
@@ -738,7 +764,20 @@ function PortfolioComponent() {
                        allowScroll();
                    }}
                    shouldCloseOnOverlayClick={false}>
-                <div className={'modalHeader'}>README.md</div>
+                <div className={'modalHeader'}>README.md
+                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-letter-x modalClose"
+                         width="44"
+                         height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#ffffff" fill="none"
+                         strokeLinecap="round" strokeLinejoin="round"
+                         onClick={() => {
+                             setModalOptnForDog(false);
+                             allowScroll();
+                         }}>
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="7" y1="4" x2="17" y2="20"/>
+                        <line x1="17" y1="4" x2="7" y2="20"/>
+                    </svg>
+                </div>
                 <div className={'modalBody'}>
                     <div className={'projectReadme'}>
                         <article className={'modalProjectContent'}>
@@ -747,11 +786,10 @@ function PortfolioComponent() {
                                 📌 Summary
                             </h2>
                             <p dir={'auto'}>
-                                <strong>
-                                    스마트폰 케이스에 무선마우스를 장착하고, 애플리켜이션으로 제어하는 프로젝트입니다.<br/><br/>
-                                </strong>
-                                대학 4인 프로젝트로 개발을 담당하였으며 개발의 90% 부분을 담당하였습니다.<br/>
-                                외부에서 노트북 활용 시 <strong>마우스의 부재로 생기는 불편한 니즈</strong>에 대한 아이디어에서 시작되었습니다.<br/>
+                                KH 정보교육원에 입학하여 진행한 final Project로써,
+                                반려 동물에 대한 관심이 많아졌으며, 이를 보고
+                                다양한 기능을 제공하는 반려동물 사이트를 만들기로 결정하고 제작한 사이트입니다.
+
                             </p>
                             <h4 dir="auto">
                                 * 주요 기능
@@ -761,25 +799,25 @@ function PortfolioComponent() {
                                     <input type="checkbox" id="" disabled={true}
                                            checked={true}
                                            className="task-list-item-checkbox"/>
-                                    탈부착 가능한 케이스
+                                    애견샵 예약 및 관리
                                 </li>
                                 <li>
                                     <input type="checkbox" id="" disabled={true}
                                            checked={true}
                                            className="task-list-item-checkbox"/>
-                                    블루투스 연결을 통한 PC와 무선마우스 기능
+                                    Market Place
                                 </li>
                                 <li>
                                     <input type="checkbox" id="" disabled={true}
                                            checked={true}
                                            className="task-list-item-checkbox"/>
-                                    애플리케이션 고유의 트랙패드 기능
+                                    병원 예약 및 관리
                                 </li>
                                 <li>
                                     <input type="checkbox" id="" disabled={true}
                                            checked={true}
                                            className="task-list-item-checkbox"/>
-                                    멀티 페어링을 통한 다양한 기기 지원
+                                    카카오톡, 문자, 이메일 메시징
                                 </li>
                             </ul>
 
@@ -787,10 +825,9 @@ function PortfolioComponent() {
                                 🤔 Background
                             </h2>
                             <p dir={'auto'}>
-                                무겁고 이동성이 부족한 데스크톱보다 어디든 휴대하면서 인터넷을 즐길 수 있는 노트북에 대한 수요가 증가하면서 이에 따른 불편한 점들이 생겨나고 있다. 그중
-                                노트북을 사용하면 필요한 주변기기들이 존재하고 이를 잊어버리거나 생략하게 되면 몇 가지 불편한 상황들을 만나게 되는데 특히 마우스의 경우 크기가 작아 쉽게
-                                잃어버리거나 잊혀질수있다 노트북에서 마우스가 없는 상황에서 작은 트랙패드의 사용은 상대적으로 제약과 불편을 가져올 수 있고. 이런 불편한 니즈를 캐치하여
-                                마우스를 언제든 휴대할 수 있게끔, 폰케이스에 블루투스 마우스의 기능을 접목하여 ' 폰케이스형 블루투스 마우스 ' 를 개발하고자한다.
+                                반려 동물에 다양한 서비스가 시장에서 제공되어짐에 따라 의료, 미용, E-COMMERCIAL 서비스를 종합적으로 제공할 수 있는 웹사이트를 제공함과 동시에,
+                                학원에서 교육받았던 내용을 토대로 웹사이트를 개발하는 프로젝트입니다.
+                                <br/><br/>
                             </p>
 
                             <h2 dir={'auto'}>
@@ -798,12 +835,10 @@ function PortfolioComponent() {
                             </h2>
 
                             <p dir={'auto'}>
-                                해당 프로젝트를 진행하면서 블루투스 연결에 필요한 descriptor 생성과 서비스, 브로드캐스터 등 안드로이드의 다양한 개발로직을 작성해볼 수
-                                있엇습니다.<br/>
-                                또한 블루투스 통신을 통한 마우스좌표값 전송에서 충분한 폴링레이트 확보하지 못하는 문제가 있었는데<br/>
-                                이런 어려움을 통한 보간작업을 해 보는 등 라이스사이클에 맞춰 애플리케이션에 제작해 오류를 줄이는 등의<br/>
-                                다양한 양식의 코딩을 진행 볼 수 있었고, 독창성과 기술력으로 학과에서 표창과 더불어 특허출원까지 진행할 수 있어<br/>
-                                매우 뜻깊은 프로젝트 였으며, 안드로이드 플랫폼에서 다양한 기능을 진행할 수 있다는 것을 다시 한 번 깨달을 수 있었습니다.
+                                학습한 DATABASE, SERVER, WEBFRONT내용과 코딩기법들을 활용해 볼 수 있었고, 팀워크를 구성하고 각자의 파트에 맞게 일하는 법과
+                                다양한 라이브러리 사용과 공공데이터 API를 사용해볼 수 있었습니다.
+                                이를 통해 처음으로 ORACLE VM을 통한 서버배포와 리눅스OS에서의 shell명령어, frontEnd와 BackEnd, MVC모델에 관한 폭 넓은 이해를
+                                피부에 와닿게 경험할 수 있었습니다.
                             </p>
 
                             <h2 dir={'auto'}>

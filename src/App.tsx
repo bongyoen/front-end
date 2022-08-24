@@ -14,6 +14,7 @@ import themes from './themes';
 // project imports
 import NavigationScroll from './layout/NavigationScroll';
 // import NavigationScroll from 'layout/NavigationScroll';
+import Modal from 'react-modal';
 
 
 const App = () => {
@@ -31,4 +32,5 @@ const App = () => {
     );
 };
 
+Modal.setAppElement('#root')
 export default App;

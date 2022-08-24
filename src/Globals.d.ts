@@ -4,3 +4,6 @@ declare module '*.css';
 declare module '*.scss';
 declare module 'quill-image-resize-module-react'
 declare module 'react-notifications'
+declare module 'react-slick'
+declare module 'react-modal'
+declare module 'g-emoji'

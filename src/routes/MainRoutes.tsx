@@ -35,7 +35,7 @@ const MainRoutes = {
     children: [
         {
             path: '/',
-            element: <Introduce/>
+            element: <PortfolioComponent/>
         },
         {
             path: 'dashboard',

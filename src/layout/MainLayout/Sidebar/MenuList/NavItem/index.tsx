@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import {forwardRef, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 // material-ui
@@ -39,15 +38,16 @@ const NavItem = ({item, level}: any) => {
         itemTarget = '_blank';
     }
 
-    let listItemProps: any = {
-        component: forwardRef((props: any, ref: any) => <Link ref={ref} {...props} to={item.url} target={itemTarget}/>)
-    };
+    // let listItemProps: any = {
+    //     component: forwardRef((props: any, ref: any) => <Link ref={ref} {...props} to={item.url} target={itemTarget}/>)
+    // };
     if (item?.external) {
-        listItemProps = {component: 'a', href: item.url, target: itemTarget};
+        // listItemProps = {component: 'a', href: item.url, target: itemTarget};
     }
 
     const itemHandler = (id: any) => {
         dispatch({type: MENU_OPEN, id});
+        dispatch({type: 'testAction', location: item.title});
         if (matchesSM) dispatch({type: SET_MENU, opened: false});
     };
 
@@ -65,7 +65,7 @@ const NavItem = ({item, level}: any) => {
 
     return (
         <ListItemButton
-            {...listItemProps}
+ //           {...listItemProps}
             disabled={item.disabled}
             sx={{
                 borderRadius: `${customization.borderRadius}px`,

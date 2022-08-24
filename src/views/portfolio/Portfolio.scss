@@ -1,0 +1,507 @@
+@mixin MastHeadCenter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 700ms ease-in-out;
+  z-index: 100000 !important;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+
+}
+
+.ReactModal__Overlay--after-open {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  outline: 0;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+
+  opacity: 1;
+
+  .modalHeader {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 0;
+    background-color: #222;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 0;
+  }
+
+  .modalBody {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+    overflow-y: auto;
+
+    .projectReadme {
+      pointer-events: auto;
+      display: block;
+      box-sizing: border-box;
+
+      .modalProjectContent {
+        width: 100%;
+        padding-right: var(--bs-gutter-x, .75rem);
+        padding-left: var(--bs-gutter-x, .75rem);
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1140px;
+
+        h1 {
+          unicode-bidi: isolate;
+          margin-top: 0;
+          line-height: normal;
+          margin-bottom: 1em;
+          font-weight: 700;
+          padding-bottom: 1em;
+          border-bottom: 1px solid #ccc;
+          font-size: 3rem;
+        }
+
+        h2 {
+          display: block;
+          margin-block-start: 0.83em;
+          margin-block-end: 0.83em;
+          margin-inline-start: 0;
+          margin-inline-end: 0;
+          unicode-bidi: isolate;
+          box-sizing: border-box;
+          margin-top: 0;
+          font-size: 1.5rem;
+
+        }
+
+        p {
+          margin-top: 0;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+a {
+  color: #0d6efd;
+  text-decoration: underline;
+
+  &:hover {
+    color: #0043af;
+  }
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.Masthead_content {
+  width: 100%;
+
+  div {
+    margin: 0 auto;
+    height: 550px;
+    text-align: center;
+    background-image: url("http://beyondi.site/uploads/localdir/developerImg.png");
+    background-size: cover;
+
+    b {
+      font-family: "휴먼엑스포", serif;
+      height: 500px;
+      color: white;
+      font-size: 3rem;
+      @include MastHeadCenter;
+
+      hr {
+        width: 3.25rem;
+        background-color: blue;
+        opacity: 1;
+      }
+
+      span b {
+        text-align: center;
+        height: 40px;
+        width: 150px;
+        background-color: orange;
+        font-size: 0.4em;
+        margin: 30px auto;
+        border-radius: 40px 40px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .MastHeadMemo {
+      font-size: 1rem;
+    }
+  }
+}
+
+@mixin title {
+  .AboutTitle {
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .AboutTitleTxt {
+      color: #000000;
+      border-bottom-color: #cccccc;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      font-family: HY견고딕, sans-serif;
+      font-weight: 400;
+      font-size: 3rem;
+      line-height: 1.5;
+    }
+
+    .titleIcon {
+      top: 50%;
+      left: -3rem;
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      opacity: .7;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.AboutMe {
+
+  -webkit-box-sizing: border-box;
+  width: 100%;
+  max-width: 71.25rem;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+
+  @include title;
+
+  .AboutSubject {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+
+    .AboutItems {
+      margin-bottom: 2rem;
+      width: 33.3333%;
+
+      .AboutInfo {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        max-width: 14rem;
+        margin: 0 auto;
+        opacity: .8;
+
+        .AboutItemIcon {
+          width: 2rem;
+          min-width: 2rem;
+          height: 2rem;
+          margin-top: 0.2rem;
+          margin-right: 2rem;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .AboutFiled {
+
+          .AboutFiledLabel {
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+          }
+
+          .AboutFiledValue {
+            font-weight: 400;
+            font-size: 1rem;
+          }
+        }
+      }
+
+
+    }
+  }
+}
+
+.Skills {
+  box-sizing: border-box;
+
+  background-color: #f9c51d;
+
+  .skillsContent {
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    max-width: 71.25rem;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    height: 79rem;
+    color: #f9c51d;
+    @include title;
+
+    .skillContainer {
+      display: flex;
+      flex-flow: column wrap;
+      align-content: space-around;
+      height: calc(100% - (7.5rem + 1px));
+
+      .skillStacks {
+        flex-shrink: 0;
+        width: 17rem;
+        padding: 1.5rem;
+        margin: 0 auto 2rem;
+        border-radius: 1rem;
+        background-color: #fff;
+        margin-bottom: 10px;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+
+        .skillsTitle {
+          box-sizing: border-box;
+          padding-bottom: 0.5rem;
+          margin-bottom: 1.5rem;
+          border-bottom: 1px solid #ccc;
+          font-weight: 700;
+          font-size: 1.5rem;
+          color: #f4623a;
+        }
+
+      }
+    }
+  }
+}
+
+.Projects {
+  background-color: #1d809f;
+  box-sizing: border-box;
+
+  .projectContent {
+    @include title;
+
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    max-width: 71.25rem;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+
+    .projectItems {
+      box-sizing: border-box;
+
+      .projectItem {
+        padding: 3rem;
+        margin: 0 auto 2rem;
+        border-radius: 1rem;
+        background-color: #fff;
+
+        .projectTitle {
+          padding-bottom: 0.5rem;
+          font-family: HY견고딕, sans-serif;
+          font-weight: 400;
+          font-size: 2.5rem;
+          color: #222;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        .projectPeriod {
+          margin-bottom: 2rem;
+          font-weight: 400;
+          font-size: 1rem;
+          color: #6c757d;
+          text-align: center;
+          opacity: .8;
+        }
+
+        .projectInfo {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          -webkit-box-pack: center;
+
+          .projectImgCarousel {
+            //overflow: hidden;
+            position: relative;
+            width: 50%;
+            margin-right: 3rem;
+            text-align: center;
+
+            img {
+              margin: 0 auto;
+              width: 350px;
+              height: 400px;
+              object-fit: contain;
+            }
+          }
+
+          .projectDescriptions {
+            width: calc(50% - 3rem);
+
+            .projectDescripMain {
+              padding-bottom: 1rem;
+              margin-bottom: 1rem;
+              border-bottom: 1px solid #ccc;
+              font-weight: 400;
+              font-size: 1rem;
+
+              .projectReadme {
+                display: table;
+                padding: 0.5rem 1rem;
+                background-color: #222;
+                border-radius: 0.25rem;
+                color: #fff;
+                cursor: pointer;
+              }
+            }
+
+            .projectDescripEa {
+              margin-bottom: 1rem;
+
+              .projectDescripEaLabel {
+                display: inline-block;
+                vertical-align: top;
+                width: 8.4rem;
+                font-weight: 900;
+                font-size: 1rem;
+              }
+
+              .projectDescripEaValue {
+                display: inline-block;
+                vertical-align: bottom;
+                width: calc(100% - 8.4rem);
+                font-weight: 400;
+                font-size: 1rem;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.Career {
+  background-color: #f5f5f5;
+
+  .CareerContent {
+    @include title;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    max-width: 71.25rem;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+
+    .CareerCompanies {
+      width: 90%;
+      margin: 0 auto;
+
+      .CareerCompnay {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        -webkit-box-pack: center;
+
+        .CareerCompnayLogo {
+          padding-right: 3rem;
+          border-right: 1px solid #ccc;
+
+          .logo {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            -webkit-box-pack: center;
+            align-items: center;
+            -webkit-box-align: center;
+            overflow: hidden;
+            width: 15rem;
+            height: 15rem;
+            border: 1px solid #ccc;
+            border-radius: 10rem;
+            background-color: #fff;
+
+            img {
+              vertical-align: middle;
+              display: block;
+              flex-shrink: 0;
+              width: 90%;
+            }
+          }
+        }
+
+        .CareerCompnayInfo {
+          padding-left: 3rem;
+
+          .CmpTitle {
+            padding-bottom: 0.5rem;
+            font-weight: 900;
+            font-size: 1.5rem;
+          }
+
+          .CmpPeriod {
+            padding-bottom: 1rem;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: #6c757d;
+          }
+
+          .CmpDescription {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ccc;
+          }
+
+          .CmpWorks {
+            padding-left: 1rem;
+            margin: 1rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+

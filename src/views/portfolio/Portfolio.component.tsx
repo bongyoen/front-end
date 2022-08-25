@@ -483,8 +483,16 @@ function PortfolioComponent() {
                                 <div className={'CareerCompnayInfo'}>
                                     <div className={'CmpTitle'}>(주) 유아이컴</div>
                                     <div className={'CmpPeriod'}>2021.04 - 2022.05</div>
-                                    <div className={'CmpDescription'}></div>
-                                    <div className={'CmpWorks'}></div>
+                                    <div className={'CmpDescription'}>
+                                        안경사업에서 안경원과 공급업체에 대한 SOLUSTION 제공과 B2B플렛폼을 운영하는 회사입니다.
+                                        <br/><br/>
+                                        <strong>Angular Framework와 SpringBoot 기반의 풀 스택 웹 기능의 전반을 작업하였습니다.</strong>
+                                    </div>
+                                    <ul className={'CmpWorks'}>
+                                        <h4>WorkFlow</h4>
+                                        <li></li>
+
+                                    </ul>
                                 </div>
                             </div>
                         </div>

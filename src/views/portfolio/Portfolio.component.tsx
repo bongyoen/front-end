@@ -490,8 +490,34 @@ function PortfolioComponent() {
                                     </div>
                                     <ul className={'CmpWorks'}>
                                         <h4>WorkFlow</h4>
-                                        <li></li>
-
+                                        <li>B2B 플랫폼 UIBOX 기간별 실시간 주문내용 페이지 및 API 개발</li>
+                                        <li>휴페이스(제품) 관련 판매, 관리 테이블 설계</li>
+                                        <li>공통분류코드 관련 API 리팩토링</li>
+                                        <li>회원가입승인절차 기획 및 로직 제작</li>
+                                        <li>Quartz스케줄링을 통한 할부제품 자동결제 프로세스 제작</li>
+                                        <li>제품상세의 리뷰, 문의, 댓글 Template제작 및 관련 API 작성</li>
+                                        <li>입점문의 관련 이메일 발송 기능 제작</li>
+                                        <li>광고 배너, 팝업 시스템 기획의 제작</li>
+                                        <li>고객센터 페이지 제작</li>
+                                        <li>제품 구매시 이메일, 문자(세종텔레콤) 기능 개발</li>
+                                        <li>등록회사의 설정관리 기능 개발</li>
+                                        <li>B2B플랫폼 포인트 관련 테이블 수정 및 리팩토링</li>
+                                        <li>렌즈(RX) 제품등록 Template 제작 및 CRUD 구현</li>
+                                        <li>제품 검색 멀티샐럭터 리팩토링</li>
+                                        <li>렌즈제품 옵션관련 Table 수정 및 폼 제작</li>
+                                        <li>공통 이미지 저장 로직 리사이징 기능을 추가</li>
+                                        <li>제품단가 설정 로직 리팩토링</li>
+                                        <li>최근본상품(플로팅배너) Template작성 및 API구현</li>
+                                        <li>POI를 통한 제품, 옵션 일괄등록 기능제작 및 마이그레이션</li>
+                                        <li>재고 실사 프로세스 구축</li>
+                                        <li>대리점 안경원의 대리주문 로직 개선</li>
+                                        <li>제조사, 대리점의 출고시스템 개선</li>
+                                        <li>제품 저장Template의 용액, RX, 안경테, 선글라스 기능 전반 개선</li>
+                                        <li>B2B메인 제품 carousel 기능 구현</li>
+                                        <li>거래처단가관리 설정기능 구현 및 제품에 반영</li>
+                                        <li>공통 validation 로직 개선</li>
+                                        <li>제품 관련 페이징(서버사이드) 모듈 제작</li>
+                                        <li>QueryDsl로직 Mybatis Mapper로직으로 전반 변경</li>
                                     </ul>
                                 </div>
                             </div>
